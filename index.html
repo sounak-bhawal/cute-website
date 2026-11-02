@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Very Important Note for You 🐶💚</title>
+  <meta name="description" content="A cute Pochacco stationery letter with questions you can only say yes to!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <!-- Music toggle button -->
+  <button id="music-toggle" class="floating-btn" title="Toggle Sound" aria-label="Toggle Sound">
+    <span class="icon">🎵</span>
+  </button>
+
+  <!-- Stationery Letter Page Container -->
+  <main class="stationery-container">
+    <div class="stationery-card">
+      <!-- Background Pochacco Illustration -->
+      <img src="pochacco-bg.png" alt="Pochacco Letter Stationery" class="stationery-bg" />
+
+      <!-- Writing & Interactive Content Area -->
+      <div class="letter-overlay">
+        <!-- Question Content -->
+        <div class="main-content" id="content-wrapper">
+          <div class="badge-wrapper">
+            <span class="tag-badge" id="tag-badge">Peace Treaty • Step 1</span>
+          </div>
+
+          <div class="mascot-frame">
+            <span class="mascot-emoji" id="mascot-emoji">🥺</span>
+          </div>
+
+          <h1 class="question-text" id="question-text">
+            Are you still super mad at your favorite person in the entire universe?
+          </h1>
+          
+          <p class="sub-text" id="sub-text">
+            (Don't look at me with that cute pouty face, it's illegal to be this adorable when grumpy)
+          </p>
+
+          <!-- Buttons Row -->
+          <div class="buttons-row" id="buttons-area">
+            <button id="yes-btn" class="btn btn-yes">
+              <span class="btn-text">YES 💚</span>
+            </button>
+
+            <button id="no-btn" class="btn btn-no">
+              <span class="btn-text">No 😤</span>
+            </button>
+          </div>
+
+          <div class="tease-message" id="tease-message"></div>
+        </div>
+
+        <!-- Celebration Screen -->
+        <div class="celebration-screen hidden" id="celebration-screen">
+          <div class="trophy-emoji">🍀🐶🍰</div>
+          <h1 class="celebration-title">TREATY SIGNED! 🎉</h1>
+          <p class="celebration-subtitle">
+            You're officially not allowed to stay angry anymore! You've unlocked unlimited lifetime cuddles, forehead kisses, and your favorite treats.
+          </p>
+
+          <div class="coupon-box">
+            <div class="coupon-title">🎟️ OFFICIAL POCHACCO FORGIVENESS COUPON</div>
+            <div class="coupon-perks">
+              <span>🐾 1x Emergency Bubble Tea / Sweet Treat</span>
+              <span>🐾 Unlimited Gentle Back & Shoulder Massages</span>
+              <span>🐾 100+ Sweet Kisses Every Single Day</span>
+            </div>
+            <div class="coupon-code">CODE: MINE_FOREVER</div>
+          </div>
+
+          <div class="celebration-actions">
+            <a id="whatsapp-link" href="#" target="_blank" class="btn btn-yes celebration-btn">
+              <span>Claim Cuddles & Treats Now 💌</span>
+            </a>
+            <button id="restart-btn" class="btn btn-subtle">
+              <span>Read Again ↺</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

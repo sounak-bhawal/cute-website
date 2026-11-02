@@ -1,0 +1,408 @@
+/* ========================================================
+   POCHACCO STATIONERY THEME (SAGE GREEN & CREAM)
+   ======================================================== */
+:root {
+  --pochacco-green: #7da85b;
+  --pochacco-dark-green: #527a33;
+  --pochacco-light-green: #b8d89e;
+  --pochacco-soft-bg: #eaf3df;
+  --gingham-bg: #d7eac2;
+  --letter-cream: #fbfbf2;
+  --dark-text: #2f3e23;
+  --muted-text: #596b4d;
+  --white: #ffffff;
+  --font-hand: 'Gaegu', cursive, sans-serif;
+  --font-text: 'Quicksand', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+body {
+  font-family: var(--font-text);
+  background-color: #dbeec8;
+  /* Gingham / picnic cloth subtle checkered pattern */
+  background-image: 
+    repeating-linear-gradient(45deg, rgba(162, 203, 131, 0.25) 0, rgba(162, 203, 131, 0.25) 16px, transparent 0, transparent 32px),
+    repeating-linear-gradient(-45deg, rgba(162, 203, 131, 0.25) 0, rgba(162, 203, 131, 0.25) 16px, transparent 0, transparent 32px);
+  background-size: 45px 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  color: var(--dark-text);
+  position: relative;
+}
+
+/* Music Floating Button */
+.floating-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 2px solid var(--pochacco-light-green);
+  box-shadow: 0 3px 10px rgba(82, 122, 51, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+.floating-btn:hover {
+  transform: scale(1.08);
+}
+
+/* Container */
+.stationery-container {
+  width: 100%;
+  max-width: 620px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.stationery-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1.414; /* Stationery sheet aspect ratio */
+  max-height: 92vh;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(71, 102, 45, 0.22), 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 4px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stationery-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Letter Content Overlay (Positioned in the lined area of the letter) */
+.letter-overlay {
+  position: relative;
+  z-index: 2;
+  width: 82%;
+  height: 74%;
+  margin-top: 6%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
+
+/* Main Content */
+.main-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: opacity 0.2s ease;
+}
+
+.badge-wrapper {
+  margin-bottom: 0.35rem;
+}
+
+.tag-badge {
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  background: #ffffff;
+  border: 1.5px solid var(--pochacco-light-green);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--pochacco-dark-green);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.mascot-frame {
+  position: relative;
+  min-height: 54px;
+  width: auto;
+  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mascot-emoji {
+  font-size: 2.8rem;
+  line-height: 1;
+  white-space: nowrap;
+  letter-spacing: 0.2rem;
+}
+
+.question-text {
+  font-family: var(--font-hand);
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--dark-text);
+  margin-bottom: 0.35rem;
+  max-width: 440px;
+}
+
+.sub-text {
+  font-family: var(--font-text);
+  font-size: 0.86rem;
+  color: var(--muted-text);
+  line-height: 1.35;
+  margin-bottom: 1.15rem;
+  max-width: 380px;
+  font-weight: 600;
+}
+
+/* Buttons */
+.buttons-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.1rem;
+  min-height: 44px;
+  width: 100%;
+}
+
+.btn {
+  font-family: var(--font-text);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.55rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  user-select: none;
+  white-space: nowrap;
+  box-shadow: 0 3px 8px rgba(71, 102, 45, 0.15);
+}
+
+.btn-yes {
+  background: var(--pochacco-green);
+  color: var(--white);
+  border: 2px solid #669046;
+  transition: background 0.2s ease, transform 0.15s ease;
+  z-index: 10;
+}
+
+.btn-yes:hover {
+  background: var(--pochacco-dark-green);
+  transform: translateY(-1px);
+}
+
+/* Runaway No Button */
+.btn-no {
+  background: #ffffff;
+  color: var(--dark-text);
+  border: 2px solid var(--pochacco-light-green);
+  transition: background 0.15s ease, left 0.18s ease-out, top 0.18s ease-out;
+  z-index: 999;
+}
+
+.btn-no:hover {
+  background: #f4faed;
+  border-color: var(--pochacco-green);
+}
+
+.tease-message {
+  margin-top: 0.9rem;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--pochacco-dark-green);
+  min-height: 1.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem 0.9rem;
+  background: #ffffff;
+  border: 1.5px solid var(--pochacco-light-green);
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(82, 122, 51, 0.1);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.tease-message:empty {
+  opacity: 0;
+  visibility: hidden;
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Celebration Screen */
+.celebration-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  animation: fadeIn 0.35s ease;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.trophy-emoji {
+  font-size: 2.6rem;
+  margin-bottom: 0.25rem;
+}
+
+.celebration-title {
+  font-family: var(--font-hand);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--pochacco-dark-green);
+  margin-bottom: 0.25rem;
+}
+
+.celebration-subtitle {
+  font-size: 0.82rem;
+  color: var(--muted-text);
+  line-height: 1.35;
+  margin-bottom: 0.85rem;
+  font-weight: 600;
+  max-width: 380px;
+}
+
+.coupon-box {
+  background: #ffffff;
+  border: 2px dashed var(--pochacco-green);
+  border-radius: 14px;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  max-width: 360px;
+  margin-bottom: 0.85rem;
+  box-shadow: 0 3px 10px rgba(82, 122, 51, 0.1);
+}
+
+.coupon-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--pochacco-dark-green);
+  letter-spacing: 0.8px;
+  margin-bottom: 0.45rem;
+}
+
+.coupon-perks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.78rem;
+  color: var(--dark-text);
+  font-weight: 600;
+  text-align: left;
+}
+
+.coupon-code {
+  margin-top: 0.65rem;
+  padding: 0.25rem 0.65rem;
+  background: var(--pochacco-soft-bg);
+  border-radius: 6px;
+  display: inline-block;
+  font-family: monospace;
+  font-weight: 700;
+  color: var(--pochacco-dark-green);
+  font-size: 0.82rem;
+}
+
+.celebration-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  width: 100%;
+  max-width: 280px;
+}
+
+.celebration-btn {
+  text-decoration: none;
+  padding: 0.65rem 1.2rem;
+  font-size: 0.88rem;
+}
+
+.btn-subtle {
+  background: transparent;
+  color: var(--muted-text);
+  font-size: 0.8rem;
+  padding: 0.3rem;
+  font-weight: 600;
+  box-shadow: none;
+}
+
+.btn-subtle:hover {
+  color: var(--pochacco-dark-green);
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 480px) {
+  .stationery-card {
+    border-radius: 20px;
+    border-width: 3px;
+  }
+
+  .letter-overlay {
+    width: 86%;
+    height: 72%;
+    margin-top: 12%;
+    padding: 0.25rem;
+  }
+
+  .question-text {
+    font-size: 1.35rem;
+  }
+
+  .sub-text {
+    font-size: 0.78rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .btn {
+    font-size: 0.88rem;
+    padding: 0.5rem 1.15rem;
+  }
+
+  .mascot-emoji {
+    font-size: 2.3rem;
+  }
+}
