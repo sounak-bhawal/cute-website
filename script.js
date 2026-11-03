@@ -19,7 +19,7 @@ const questions = [
   {
     step: "Peace Treaty • Step 3",
     emoji: "🍫🧋",
-    question: "Will you accept a peace bribe of unlimited cuddles, snacks, and your favorite sweet treat right now?",
+    question: "Will you accept a peace bribe of unlimited cuddles, snacks, and your favorite momos right now?",
     sub: "I will literally order or make anything you crave. No limits today!",
     yesBtn: "Bribe accepted! 🤤",
     noBtn: "I cannot be bought! 🚫"
@@ -27,7 +27,7 @@ const questions = [
   {
     step: "Peace Treaty • Step 4",
     emoji: "💆‍♂️🫦",
-    question: "What if I throw in a 30-minute massage + lifetime subscription to forehead & collarbone kisses?",
+    question: "What if I throw in a lifetime subscription to forehead & neck kisses?",
     sub: "Plus I promise not to annoy you for at least the next 3 hours (terms & conditions apply 😜)",
     yesBtn: "Deal! 💋",
     noBtn: "No way! 🙈"
